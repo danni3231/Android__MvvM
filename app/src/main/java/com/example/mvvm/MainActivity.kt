@@ -31,11 +31,8 @@ class MainActivity : AppCompatActivity() {
 
 
         binding.searchBtn.setOnClickListener {
-            var artist: String = binding.artistName.toString()
-
-            Log.e(">>>", artist)
-            songListViewModel.GETListSongs("mana")
-
+            var artist: String = binding.artistName.text.toString()
+            songListViewModel.GETListSongs(artist)
         }
 
         //Observa las variables mutables de SongListViewModel
